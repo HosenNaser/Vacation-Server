@@ -43,10 +43,10 @@ exports.post_login = (req, res) => {
         if (valid) {
           res.status(202).json({ message: "login success", success: true, user: result });
         } else {
-          res.status(402).json({ message: "wrong email or password", success: false });
+          res.status(402).json({ message: "wrong Username or password", success: false });
         }
       } else {
-        res.status(402).json({ message: "wrong email or password", success: false });
+        res.status(402).json({ message: "wrong Username or password", success: false });
       }
     })
     .catch((err) => {
